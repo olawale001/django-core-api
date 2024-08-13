@@ -168,11 +168,11 @@ SWAGGER_SETTINGS = {
     "LONGIN_URL": LONGIN_URL,
     "LONGOUT_URL": LONGOUT_URL,
     "DEFAULT_INFO":"ecommerce.urls.schema_view",
-    "DEFAULT_SPEC_RENDERS": [
-        'drf_yasg.renderers.OpenAPIRenderer',
-        'drf_yasg.renderers.SwaggerUIRenderer',
-        'drf_yasg.renderers.ReDocRenderer',
-    ]
+    # "DEFAULT_SPEC_RENDERS": [
+    #     'drf_yasg.renderers.OpenAPIRenderer',
+    #     'drf_yasg.renderers.SwaggerUIRenderer',
+    #     'drf_yasg.renderers.ReDocRenderer',
+    # ]
 }
 
 REDOC_SETTING = {
