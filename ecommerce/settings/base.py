@@ -117,6 +117,9 @@ REST_FRAMEWORK = {
     ]
 }
 
+
+AUTH_USER_MODEL = 'authentication.User'
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
