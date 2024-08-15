@@ -6,14 +6,14 @@ from.models import User
 from rest_framework.permissions import AllowAny
 
 
-class SignUpUserAPI(mixins.CreateModelMixin, mixins.DestroyModelMixin, viewsets.GenericViewSet):
+class SignUpUserAPI(mixins.CreateModelMixin, mixins.DestroyModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = User.objects.all()
     serializer_class = SignUpUserSerializer
     permission_class = [AllowAny]
 
 
-    def get_queryset(self):
-        user = User.objects.get(user=self.req.user)
-        return user
+    # def get_queryset(self):
+    #     user = User.objects.get(email=self.req.user)
+    #     return user
 
 
