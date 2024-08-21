@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'drf_yasg',
+    'django_filters',
     #Custume App
     'authentication',
     'products',
@@ -55,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Custom Middleware
+    'authentication.middleware.UserContextMiddleware',
 ]
 
 ROOT_URLCONF = 'ecommerce.urls'
@@ -115,7 +118,12 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
-    ]
+    ],
+    'DEFAULT_FILTER_DJANGO_FILTER_BACKENDS':
+    [
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ],
+    
 }
 
 
