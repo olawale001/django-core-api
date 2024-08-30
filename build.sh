@@ -1,8 +1,9 @@
-python3 -m venv venv
+python3.9 -m venv venv
 source venv/bin/activate
 
 
 pip install -r requirements.txt
-Python manage.py makemigrations
-Python manage.py migrate
-Python manage.py collectstatic --noinput
+sleep 10
+python3.9 manage.py makemigrations
+python3.9 manage.py migrate
+python3.9 manage.py collectstatic --noinput
