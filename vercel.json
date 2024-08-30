@@ -11,7 +11,7 @@
             "src": "build.sh",
             "use": "@vercel/static-build",
             "config": {
-                "distDir": "staticfiles_build"
+                "distDir": "ecommerce/staticfiles_build"
             }
         }
     ],
@@ -26,6 +26,6 @@
         }
     ],
 
-    "outputDirectory": "staticfiles_build"
+    "outputDirectory": "ecommerce/staticfiles_build"
 
 }
