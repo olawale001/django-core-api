@@ -4,7 +4,7 @@
     "builds": [
         {
             "src": "ecommerce/wsgi.py",
-            "user": "@vercel/python",
+            "use": "@vercel/python",
             "config": {"maxLambdaSiize": "15mb", "runtime": "python3.10"}
         },
         {
