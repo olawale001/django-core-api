@@ -33,9 +33,8 @@ DEFAULT_FROM_EMAIL= f'ecommerce <{EMAIL_HOST_USER}>'
 
 
 DATABASES = {
-    'default': {
-        dj_database_url.config(
+    'default': dj_database_url.config(
             default=config('DATABASE_URL')
-        )
-    }   
+    )
+       
 }
