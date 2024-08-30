@@ -14,14 +14,15 @@ class ProductAPIView(viewsets.ModelViewSet):
     parser_classes = [MultiPartParser, FormParser]
     filter_backends = [DjangoFilterBackend, SearchFilter]
     filterset_fields = ['category']
-    search_fields = ['name','category']
+    search_fields = ['category']
 
 
     def get_queryset(self):
         queryset = super().get_queryset()
         category = self.request.query_params.get('category', None)
         if category:
-            queryset = queryset.filter(category__iexact=category)
+            queryset = queryset.filter(category=category)
         return queryset
     
+
     

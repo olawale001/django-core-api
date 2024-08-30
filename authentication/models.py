@@ -44,6 +44,11 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.email or self.get_full_name()
+    
+class ForgetPassword(models.Model):
+    user = models.ForeignKey(User, verbose_name=_("user"), on_delete=models.CASCADE)  
+    otp = models.CharField(_("OTP"), max_length=6, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
 
 
 

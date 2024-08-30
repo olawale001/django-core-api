@@ -6,7 +6,8 @@ from . import views
 app_name = 'auth'
 
 router = DefaultRouter()
-router.register('sign-up', views.SignUpUserAPI, basename='signp')
+router.register('signup', views.SignUpUserAPI, basename='signup')
+router.register('auth', views.AuthenticationViewset, basename='auth_views')
 
 urlpatterns = [
     path('', include(router.urls)),

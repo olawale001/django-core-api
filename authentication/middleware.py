@@ -14,5 +14,7 @@ class UserContextMiddleware(MiddlewareMixin):
                 token = sub("Bearer ", "", header_token)
                 _token = Token.objects.get(key=token)
                 request.user = User.objects.get(id=_token.user_id)
-        except (Token.DoesNotExist, User.DoesNotExit):
+        except (Token.DoesNotExists, User.DoesNotExits):
             request.user = None    
+
+
